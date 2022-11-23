@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Record</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+<div class="container">
+<header class="header">
+<h1>Student Record</h1>
+<div class="social">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+</header>
+<aside class="left">
+<img src="4.jpg" width="160px" />
+<ul>
+<li><a class="active" href="home.html">Home</a></li>
+<li><a href="record.html">Record</a></li>
+<li><a href="attendance.html">Attendance</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="login.html">Log Out</a></li>
+</ul>
+<br><br>
+<p>“Motivation is what gets you started. Habit is what keeps you going.”
+    <br>-Jim Ryun</p>
+</aside>
+<main class="content">
+</table>
+
+<h1 align="center">STUDENT RECORD SYSTEM</h1>
+<table>
+<form method="post" action="record1.html">
+<label for="fname">Enter the First Name:</label>
+<input type="text" id="fname" name="fname" placeholder=" First Name"><br><br>
+
+<label for="lname">Enter the Last Name:</label>
+<input type="text" id="lname" name="lname" placeholder=" Last Name"><br><br>
+<lable for="reg">Enter register number:</lable>
+<input type="text" id="reg" name="reg" placeholder="Register No."><br><br>
+
+<label for="gender">GENDER:</label>
+<input type="radio" id="gender" name="gender" value="male">MALE
+<input type="radio" id="gender" name="gender" value="female">FEMALE<br><br>
+
+<label for="bg">BLOOD GROUP:</label>
+<select name="bg" id="bg">
+	<option value="none" selected disabled hidden>select the blood group</option>
+	<option value="A positive">A +ve </option>
+	<option value="A negative">A -ve</option>
+	<option value="A "> A</option>
+	<option value="B positive">B +ve </option>
+	<option value="B negative">B -ve </option>
+	<option value="B"> B</option>
+	<option value="AB positive">AB +ve </option>
+	<option value="AB negative"> AB -ve</option>
+	<option value="AB">AB </option>
+	<option value="O positive">O +ve </option>
+	<option value="O negative"> O -ve</option>
+	<option value="O">O </option>
+	<option value="unknown">UNKNOWN</option>
+</select>
+<br><br>
+<label for="commaddress">COMMUNICATION ADDRESS:</label><br><br>
+<textarea cols="30" rows="3" value="commaddress">
+</textarea>
+<br>
+
+<label for="peraddress">PERMANENT ADDRESS:</label><br>
+<textarea cols="30" rows="3" value="peraddress" >
+</textarea>
+
+<br> <br>
+
+<label for="date-of-birth">Date Of Birth:</label>
+<input type="date" id="date-of-birth" name="date-of-birth"><br><br>
+
+<label for="age">Age</label>
+<input type="number" name="age" id="age" min="18" max="30" placeholder="Enter the Age"><br><br>
+
+<label for="email">EMAIL:</label>
+<input type="email" id="email" name="email" placeholder="Email address"><br><br>
+<label for="nation">NATIONALITY:</label>
+<input type="text" id="nation" name="nation" placeholder="Nationlity"><br><br>
+<label for="mtongue">Mother Tongue:</label>
+<input type="text" id="mtongue" name="mtongue" placeholder="Mother tongue"><br><br>
+
+<label for="admintype">QUOTA:</label>
+<input type="radio" id="admintype" name="admintype" value="GOVN">GOVERNMENT
+<input type="radio" id="admintype" name="admintype" value="managment">MANAGEMENT<br><br>
+
+<div class="a">
+<input style="background-color: #0000CD; color: white; height: 25px;width: 75px;" align="right" type="submit" value="Next">
+</div>
+</form>
+
+</table>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+  body {
+    margin: 0;
+    box-sizing: border-box;
+      background-image:url('bg-rent.jpg');
+      background-size:100% 100%;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+
+
+  .container {
+    line-height: 150%;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #e9e9e9;
+  }
+
+  .header h1 {
+    color: #222222;
+    font-size: 30px;
+    font-family: "Pacifico", cursive;
+  }
+
+  .header .social a {
+    padding: 0 5px;
+    color: #222222;
+  }
+
+  .left {
+    float: left;
+    width: 180px;
+    margin: 0;
+    padding: 1em;
+  }
+
+  .content {
+    margin-left: 190px;
+    border-left: 1px solid #d4d4d4;
+    padding: 1em;
+    overflow: hidden;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  li a.active {
+    background-color: #84e4e2;
+    color: white;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #29292a;
+    color: white;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+  }
+
+  tr:nth-child(1) {
+    background-color: #84e4e2;
+    color: white;
+  }
+
+  tr td i.fas {
+    display: block;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .footer {
+    padding: 55px 20px;
+    background-color: #2e3550;
+    color: white;
+    text-align: center;
+  }
+</style>
+</main>
+<footer class="footer">&copy; RECORD</footer>
+</div>
+</body>
+</html>

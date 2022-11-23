@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Record</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+<header class="header">
+<h1>Student Record</h1>
+<div class="social">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+</header>
+<aside class="left">
+<img src="4.jpg" width="160px" />
+<ul>
+<li><a class="active" href="home.html">Home</a></li>
+<li><a href="record.html">Record</a></li>
+<li><a href="attendance.html">Attendance</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="login.html">Log Out</a></li>
+</ul>
+<br><br>
+<p>“Motivation is what gets you started. Habit is what keeps you going.”
+    <br>-Jim Ryun</p>
+</aside>
+<main class="content">
+<center> 
+ <table border="1" cellspacing="5" height="150" width="1500" bgcolor="white"> 
+  <h1 align="center">STUDENT MARKS</h1>
+    <caption><b>Input Marks</b></caption> 
+      <tr> 
+          <th rowspan="2">Name</th> 
+          <th colspan="6">Score</th>                                                        
+          </tr>                                                                                      
+          <tr>                                                                
+            <th>CN</th>                                                                         
+              <th>Flat</th>                                                                                      
+              <th>Web Technology</th>                                                           
+              <th>C Programming</th> 
+              <th>NODE.js </th>
+              <th>AIMS</th>                                                       
+            </tr>                                                                       
+            <tr>                                
+              <td><input type="texxt" id="aname"></td>                                  
+              <td><input type="number" id="am"></td>                                  
+              <td><input type="number" id="aj"></td> 
+              <td><input type="number" id="ad"></td>                                                                        
+              <td><input type="number" id="an" ></td> 
+                <td><input type="number" id="kd" ></td> 
+                  <td><input type="number" id="jd" ></td> 
+                  </tr> 
+                   <tr>                                       
+                    <th colspan="7" height="30"> 
+                      <input type="submit" value="Add To Table" onclick="Sub()"></th>                                                        
+                    </tr>                                                                
+                  </table>                                                                 
+                  <br>
+                  <table border="1" cellspacing="13" bgcolor="white"  height="100" width="1500" cellpadding="6" id="TableScore">                                                                 
+                    <caption><b>Student Data</b></caption> 
+                      <tr> 
+                         <th width="180">Name</th> 
+                         <th width="180">CN</th> 
+                         <th width="180">Flat</th> 
+                         <th>Web Technology</th> 
+                         <th>C Programming</th> 
+                         <th>NODE.js </th> 
+                         <th>AIMS</th> 
+                         <th>Total</th> 
+                         <th>Average</th> 
+                         <th>Pass Or Fail</th>
+                       </tr> 
+                  </table> 
+                  </center> 
+                    <script type="text/javascript"> 
+                      function Sub(){ 
+                         var n, k, r, e, v,j,b, sum, avg; 
+                         n=(document.getElementById('aname').value); 
+                         k=parseFloat(document.getElementById('am').value); 
+                         r=parseFloat(document.getElementById('aj').value);                     
+                         e=parseFloat(document.getElementById('ad').value);                    
+                         v=parseFloat(document.getElementById('an').value);                      
+                         j=parseFloat(document.getElementById('kd').value);                     
+                         b=parseFloat(document.getElementById('jd').value);                                                       
+                         sum=k+r+e+v+j+b;                                                            
+                         avg=sum/6;                   
+                         var newTable = document.getElementById('TableScore');                                      
+                         var row = newTable.insertRow(-1);                                         
+                         var cell1 = row.insertCell(0);                                         
+                         var cell2 = row.insertCell(0);                                         
+                         var cell3 = row.insertCell(0);                                         
+                         var cell4 = row.insertCell(0);                                         
+                         var cell5 = row.insertCell(0);                                         
+                         var cell6 = row.insertCell(0);                                        
+                         var cell7 = row.insertCell(0);        
+                         var cell8 = row.insertCell(0);                                         
+                         var cell9 = row.insertCell(0);                                         
+                         var cell10 = row.insertCell(0);                                        
+                         cell10.innerHTML= n;                                                    
+                         cell9.innerHTML= k;                                                   
+                         cell8.innerHTML= r;                                                    
+                         cell7.innerHTML= e;                                                    
+                         cell6.innerHTML= v;                                                    
+                         cell5.innerHTML= j;                                                    
+                         cell4.innerHTML= b;                                                  
+                         cell3.innerHTML=sum;                                                  
+                         cell2.innerHTML = avg;                                                          
+                         if(avg>=40){                         
+                          cell1.innerHTML="<font color=green>Pass</font>";                                                                           
+                        }else{                             
+                          cell1.innerHTML="<font color=red>Fail</font>";                                                                       
+                        }
+                      } </script> 
+       <style>
+        @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+    
+        body {
+    margin: 0;
+    box-sizing: border-box;
+      background-image:url('bg-rent.jpg');
+      background-size:100% 100%;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+        .container {
+          line-height: 150%;
+        }
+    
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px;
+          background-color: #e9e9e9;
+        }
+    
+        .header h1 {
+          color: #222222;
+          font-size: 30px;
+          font-family: "Pacifico", cursive;
+        }
+    
+        .header .social a {
+          padding: 0 5px;
+          color: #222222;
+        }
+    
+        .left {
+          float: left;
+          width: 180px;
+          margin: 0;
+          padding: 1em;
+        }
+    
+        .content {
+          margin-left: 190px;
+          border-left: 1px solid #d4d4d4;
+          padding: 1em;
+          overflow: hidden;
+        }
+    
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          font-family: sans-serif;
+        }
+    
+        li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+    
+        li a.active {
+          background-color: #84e4e2;
+          color: white;
+        }
+    
+        li a:hover:not(.active) {
+          background-color: #29292a;
+          color: white;
+        }
+    
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+          margin: 30px 0;
+        }
+    
+        td,
+        th {
+          border: 1px solid #dddddd;
+          padding: 8px;
+        }
+    
+        tr:nth-child(1) {
+          background-color: #84e4e2;
+          color: white;
+        }
+    
+        tr td i.fas {
+          display: block;
+          font-size: 35px;
+          text-align: center;
+        }
+    
+        .footer {
+          padding: 55px 20px;
+          background-color: #2e3550;
+          color: white;
+          text-align: center;
+        }
+      </style>                                                                               
+</main>
+<footer class="footer">&copy; RECORD</footer>
+</div>
+</body>
+</html>
